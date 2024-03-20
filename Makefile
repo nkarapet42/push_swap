@@ -56,6 +56,18 @@ clean:
 fclean: clean
 	$(RM) $(NAME) $(BONUS_NAME)
 
+test: $(NAME)
+	$(eval ARG = $(shell jot -r 100 0 2000000))
+	./push_swap $(ARG) | ./checker_Mac $(ARG)
+	@echo -n "Instructions: "
+	@./push_swap $(ARG) | wc -l
+
+test_my: $(NAME) $(BONUS_NAME)
+	$(eval ARG = $(shell jot -r 500 0 2000000))
+	./push_swap $(ARG) | ./checker $(ARG)
+	@echo -n "Instructions: "
+	@./push_swap $(ARG) | wc -l
+
 re: fclean all bonus
 
 .PHONY: all clean fclean re
