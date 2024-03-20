@@ -33,6 +33,8 @@ rrr : rra and rrb at the same time.</br>
 `make bonus` - Makes _checker_    
 `make clean` - Deletes all the resulting object files  
 `make fclean` - Deletes _push_swap_ , _checker_ and all the resulting object files  
+`make test` - Test your _push_swap_ with cheker_MAC  
+`make test_my` - Test your _push_swap_ with your _checker_  
 `make re` - Deletes everything and rebuilds
 
 ### Basic Usage
